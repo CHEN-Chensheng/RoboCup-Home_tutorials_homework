@@ -1,0 +1,18 @@
+<launch>
+
+
+	<!-- Clustering -->
+        <node pkg="object_detection" type="detection" name="object_clustering" output="screen">
+	</node>
+
+	<!-- Classify Object -->
+        <!--node pkg="object_detection" type="object_classifier" name="object_classifier" output="screen">
+        </node-->
+
+	<!-- run rviz if needed -->
+	<!--<node name="rviz" pkg="rviz" type="rviz" args="-d $(find object_detection)/config/objects_detection.rviz"/> -->
+
+
+</launch>
+
+

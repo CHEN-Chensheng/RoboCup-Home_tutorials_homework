@@ -1,0 +1,33 @@
+T2_E1:
+cd ros/workspace/tiago_ws
+source devel/setup.bash
+roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:=T2_E1
+
+T2_E2:
+roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:office
+rosrun rviz rviz
+then in the rviz-interface, we choose the File->Open Config->ros/workspace/T2_E2/TIAGo.rviz
+
+T2_E3
+In a new termin:
+roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel gzpose:="-x 0.0 -y 0.3 -z 0.0 -R 0.0 -P 0.0 -Y 0.0"
+In a new termin:
+cd ros/workspace/tiago_ws
+rosrun turtle_vis turtle_control_node
+
+In a new termin:
+cd ros/workspace/tiago_ws
+rosrun turtle_vis turtle_set_position
+
+T2_E4
+In a new termin:
+roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel
+In a new termin:
+cd ros/workspace/tiago_ws
+roslaunch controllers_tutorials new_torso_controller.launch
+
+Here there will be the resource conflict.So press Ctrl+C
+then input:
+rosrun controller_manager controller_manager kill torso_controller
+roslaunch controllers_tutorials new_torso_controller.launch
+

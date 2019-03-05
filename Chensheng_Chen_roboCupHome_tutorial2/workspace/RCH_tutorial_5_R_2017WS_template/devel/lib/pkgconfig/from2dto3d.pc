@@ -1,0 +1,8 @@
+prefix=/home/chenshengchen/ros/workspace/RCH_tutorial_5_R_2017WS_template/devel
+
+Name: from2dto3d
+Description: Description of from2dto3d
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/chenshengchen/ros/workspace/RCH_tutorial_5_R_2017WS_template/devel/lib 
+Requires: message_runtime

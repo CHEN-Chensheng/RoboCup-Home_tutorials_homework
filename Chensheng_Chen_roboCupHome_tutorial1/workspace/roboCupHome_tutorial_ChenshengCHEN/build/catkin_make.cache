@@ -1,0 +1,2 @@
+turtle_vis
+-G CodeBlocks - Unix Makefiles -DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX=/home/chenshengchen/Chensheng_Chen_roboCupHome_tutorial1/workspace/roboCupHome_tutorial_ChenshengCHEN/devel -DCMAKE_INSTALL_PREFIX=/home/chenshengchen/Chensheng_Chen_roboCupHome_tutorial1/workspace/roboCupHome_tutorial_ChenshengCHEN/install

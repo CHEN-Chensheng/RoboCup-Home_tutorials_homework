@@ -1,0 +1,8 @@
+prefix=/home/chenshengchen/ros/workspace/hector_slam/devel
+
+Name: hector_imu_attitude_to_tf
+Description: Description of hector_imu_attitude_to_tf
+Version: 0.3.5
+Cflags: 
+Libs: -L/home/chenshengchen/ros/workspace/hector_slam/devel/lib 
+Requires: 

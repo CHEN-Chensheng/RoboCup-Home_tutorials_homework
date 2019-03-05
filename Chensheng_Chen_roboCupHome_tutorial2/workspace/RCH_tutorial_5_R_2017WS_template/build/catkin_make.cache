@@ -1,0 +1,2 @@
+from2Dto3D:object_detection:perception_msgs:plane_segmentation
+-G CodeBlocks - Unix Makefiles -DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX=/home/chenshengchen/ros/workspace/RCH_tutorial_5_R_2017WS_template/devel -DCMAKE_INSTALL_PREFIX=/home/chenshengchen/ros/workspace/RCH_tutorial_5_R_2017WS_template/install

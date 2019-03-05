@@ -1,0 +1,8 @@
+prefix=/home/chenshengchen/ros/workspace/RCH_tutorial_5_R_2017WS_template/devel
+
+Name: perception_msgs
+Description: Description of perception_msgs
+Version: 0.0.1
+Cflags: -I/home/chenshengchen/ros/workspace/RCH_tutorial_5_R_2017WS_template/devel/include
+Libs: -L/home/chenshengchen/ros/workspace/RCH_tutorial_5_R_2017WS_template/devel/lib 
+Requires: std_msgs geometry_msgs sensor_msgs message_runtime

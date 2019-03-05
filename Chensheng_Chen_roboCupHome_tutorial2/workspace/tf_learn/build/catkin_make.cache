@@ -1,0 +1,2 @@
+lerning_tf
+-G CodeBlocks - Unix Makefiles -DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX=/home/chenshengchen/ros/workspace/tf_learn/devel -DCMAKE_INSTALL_PREFIX=/home/chenshengchen/ros/workspace/tf_learn/install

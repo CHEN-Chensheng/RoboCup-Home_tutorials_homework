@@ -1,0 +1,1 @@
+   For exercise3, please run as follows: roscore ->  rosbag play -l tutorial4.bag -> roslaunch darknet_ros darknet_ros.launch -> rosrun object_detection object_detection -> then input "class" in the termin, such as bottle ->  rosrun from2dto3d from2dto3d -> rostopic echo /Output_

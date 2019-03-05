@@ -1,0 +1,8 @@
+prefix=/home/chenshengchen/ros/workspace/roboCupHome_tutorial_ChenshengCHEN/src-build/devel
+
+Name: turtle_vis
+Description: Description of turtle_vis
+Version: 0.0.0
+Cflags: -I/home/chenshengchen/ros/workspace/roboCupHome_tutorial_ChenshengCHEN/src-build/devel/include -I/home/chenshengchen/ros/workspace/roboCupHome_tutorial_ChenshengCHEN/src/turtle_vis/include
+Libs: -L/home/chenshengchen/ros/workspace/roboCupHome_tutorial_ChenshengCHEN/src-build/devel/lib -lturtle_vis
+Requires: roscpp rospy std_msgs tf tf_conversions visualization_msgs message_run

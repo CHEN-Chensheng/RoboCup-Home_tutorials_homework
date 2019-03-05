@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/chenshengchen/ros/workspace/hector_slam/devel/setup.sh
