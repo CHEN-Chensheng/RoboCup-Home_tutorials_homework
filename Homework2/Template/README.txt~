@@ -1,0 +1,72 @@
+################### Command and message to publish to the mobile base
+
+rostopic pub /mobile_base_controller/cmd_vel geometry_msgs/Twist "linear:
+ x: 1.0
+ y: 0.0
+ z: 0.0
+angular:
+ x: 0.0
+ y: 0.0
+ z: 0.0" -r 3
+ 
+ 
+################### Command and message to publish to the arm joints.
+
+rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory "header:  
+  seq: 0
+  stamp: 
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+joint_names: ['head_1_joint']
+points: 
+  - 
+    positions: [0.5]
+    velocities: []
+    accelerations: []
+    effort: []
+    time_from_start: 
+      secs: 1
+      nsecs: 0"
+      
+rostopic pub /head_controller/command trajectory_msgs/JointTrajectory "header: 
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+joint_names: ['head_1_joint','head_2_joint']
+points:
+  -
+    positions: [1.0, -1.0]
+    velocities: []
+    accelerations: []
+    effort: []
+    time_from_start:
+      secs: 1
+      nsecs: 0"
+      
+      
+############################## Function to read TIAGo robot's ppsition
+
+void TurtleClass::getTiagoPose(const nav_msgs::Odometry::ConstPtr &msg)
+{
+    pthread_mutex_lock( &this->count_mutex );
+
+    this->turtlePose_g(0)=msg->pose.pose.position.x;
+    this->turtlePose_g(1)=msg->pose.pose.position.y;
+
+    Quaterniond q;
+    q.x() = msg->pose.pose.orientation.x;
+    q.y() = msg->pose.pose.orientation.y;
+    q.z() = msg->pose.pose.orientation.z;
+    q.w() = msg->pose.pose.orientation.w;
+
+    Vector3d euler = q.toRotationMatrix().eulerAngles(0, 1, 2);
+
+    this->turtlePose_g(2) = euler(2);
+
+    pthread_mutex_unlock( &this->count_mutex );
+
+    ROS_INFO_STREAM("Tiago Pose: "<<this->turtlePose_g.transpose());
+}

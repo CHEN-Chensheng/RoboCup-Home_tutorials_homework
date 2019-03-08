@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!--LAUNCH RVIZ NODE -->
+  <!--<node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtle_vis)/launch/rvizConfigs/turtleTutorial.rviz"/>-->
+
+  <!--#>>>>TODO:LAUNCH TURTLE VISUALIZATION NODE-->
+  <node name="simple_navigation_goals" pkg="simple_navigation_goals" type="simple_navigation_goals"/>  //type是可执行文件名字
+
+  <!--<rosparam file="$(find turtle_vis)/launch/rvizConfigs/turtle_gains.yaml"/>-->
+  <!--<arg name="p_gain" default="1"/>-->
+  <node name="integration" pkg="integration" type="integration"/>
+
+
+
+</launch>

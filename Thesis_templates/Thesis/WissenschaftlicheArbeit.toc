@@ -1,0 +1,10 @@
+\select@language {ngerman}
+\vspace {-10pt}
+\contentsline {chapter}{\numberline {1}Gripper Control: Impedance And Admittance Control}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Control Structure}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Control Law}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Pactical Problem}{2}{section.1.3}
+\vspace {-10pt}
+\contentsline {chapter}{\nonumberline Tabellenvarianten}{6}{chapter*.6}
+\vspace {-10pt}
+\contentsline {chapter}{\nonumberline Tabellenvarianten 2}{7}{chapter*.13}

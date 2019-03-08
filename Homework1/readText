@@ -1,0 +1,33 @@
+The way of running my nodes:
+1) roscore
+
+2) cd /ros/workspace/roboCupHome_tutorial_ChenshengCHEN
+
+3) source devel/setup.bash
+
+4) roslaunch turtle_vis TurtleVis.launch
+
+5) create a new termin
+
+6) cd /ros/workspace/roboCupHome_tutorial_ChenshengCHEN
+
+7) source devel/setup.bash
+
+8) rosservice call /TurtlePose  "x :2.0
+y: 2.0
+theta: 1.57
+
+9) rosrun turtle_vis turtle_set_position
+ 
+   then input the x,y,theta
+
+Question1:
+
+In the node1, we create a service. We record x, y, theta in the DesiredPose.msg in the file msg. At the same time, we define the function "bool TurtleClass::getDPose(turtle_vis::send_desired_pose::Request &req, turtle_vis::send_desired_pose::Response &res)". In the function we get the values of x, y, theta and put the three values into turtlePose_desired_g. In the turtle_control_node.cpp we give the values of turtlePose_desired_g to turtlePose_desired_local. Then we calculate the error by using turtlePose minus turtlePose_desired_local.
+
+Question2:
+
+Service is one-time communication. When a client sends a request, then server sends back a response. Then the communication will be closed. If the client wants to have another information from the serve, it needs to send another request. Thus there is only one communication between client and server.
+This is not like topics. With topics the publischer keep sending information to subscriber. No matter it is updated, the publisher will continue to send the information to the subscriber.
+In short, Publisher/Subscriber asynchronous many-to-many communication streams.
+Service/Client synchronous one-to-many network-based functions.
